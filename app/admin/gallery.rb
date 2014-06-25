@@ -22,7 +22,7 @@ ActiveAdmin.register Gallery do
   index :as => :grid do |gallery|
     div do
       a href: admin_gallery_path(gallery) do
-        image_tag("galleries/")
+        image_tag gallery.image_url.to_s
       end
     end
    a truncate(gallery.title), :href => admin_gallery_path(gallery)

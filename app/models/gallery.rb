@@ -1,4 +1,6 @@
 class Gallery < ActiveRecord::Base
+    
+  mount_uploader :image, ImageUploader
 
 	CATEGORY = %w( fayetteville pinehurst myrtlebeach )
 
